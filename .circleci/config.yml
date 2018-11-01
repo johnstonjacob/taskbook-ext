@@ -18,6 +18,9 @@ jobs:
 
       - run: npm install
       - run:
+          name: Run linter
+          command: npm run lint
+      - run:
           name: Run tests
           command: npm test
 
@@ -52,5 +55,3 @@ workflows:
           filters:
             tags:
               only: /^v.*/
-            branches:
-              ignore: /.*/

@@ -1,7 +1,7 @@
 {
   "name": "taskbook-ext",
   "productName": "Taskbook Extended",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "📓 Tasks, boards & notes for the command-line habitat",
   "repository": "johnstonjacob/taskbook-ext",
   "license": "MIT",
@@ -41,7 +41,9 @@
     }
   },
   "scripts": {
-    "test": "xo"
+    "test": "xo",
+    "lint": "xo",
+    "lint:fix": "prettier --write './**/*.js'"
   },
   "dependencies": {
     "chalk": "^2.4.1",
@@ -52,9 +54,12 @@
     "update-notifier": "^2.5.0"
   },
   "devDependencies": {
+    "pre-commit": "^1.2.2",
     "xo": "*"
   },
+  "pre-commit": ["lint"],
   "xo": {
-    "space": 2
+    "prettier": true,
+    "space": 4
   }
 }

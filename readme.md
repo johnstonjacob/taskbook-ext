@@ -14,15 +14,21 @@
 [![CircleCI](https://circleci.com/gh/johnstonjacob/taskbook-ext/tree/master.svg?style=svg)](https://circleci.com/gh/johnstonjacob/taskbook-ext/tree/master)
 </p>
 
+
 ## Description
 
 By utilizing a simple and minimal usage syntax, that requires a flat learning curve, taskbook-ext enables you to effectively manage your tasks and notes across multiple boards from within your terminal. All data are written atomically to the storage in order to prevent corruptions, and are never shared with anyone or anything. Deleted items are automatically archived and can be inspected or restored at any moment.
 
 ## Why fork & differences betwen taskbook and taskbook-ext
 
-I wanted a few features included that I wasn't sure fit into the style of the original project. Namely I wanted a plugin system to easily be able to drop new commands in and out, a system to add events to my calendar, and a way to sync my tasks across devices. I use taskbook extensively and to do some of these things the way I wanted I figured I might end up making drastic changes to the codebase, so I forked. I'd be more than happy to combine the codebases down the road if thats what the original author would want.
+I wanted a few features included that I wasn't sure fit into the style of the original project. Namely I wanted a system to add events to my calendar, and a way to sync my tasks across devices. I use taskbook extensively and to do some of these things the way I wanted I figured I might end up making drastic changes to the codebase, so I forked. I'd be more than happy to combine the codebases down the road if thats what the original author would want.
 
-Visit the [contributing guidelines](https://github.com/johnstonjacob/taskbook-ext/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
+TODO:
+[x] Add fantastical 2 support
+[] Move away from current arg parsing system
+[] Implement multiple calendars support
+[] Sync tasks across devices
+~~[] Rewrite in rust to improve morality~~
 
 ## Highlights
 
