@@ -1,18 +1,10 @@
-<h1 align="center">
-  Taskbook Extended
-</h1>
+# Taskbook Extended
 
-<h4 align="center">
-  📓 Tasks, boards & notes for the command-line habitat
-</h4>
+#### 📓 Tasks, boards & notes for the command-line habitat
 
-<div align="center">
-  <img alt="Boards" width="60%" src="media/header-boards.png"/>
-</div>
+![Boards](media/header-boards.png)
 
-<p align="center">
-<img alt="CircleCI Status Check" src="https://circleci.com/gh/johnstonjacob/taskbook-ext.svg?style=shield" />
-</p>
+[![CircleCI](https://circleci.com/gh/johnstonjacob/taskbook-ext/tree/master.svg?style=shield)](https://circleci.com/gh/johnstonjacob/taskbook-ext/tree/master)
 
 
 ## Description
@@ -21,14 +13,16 @@ By utilizing a simple and minimal usage syntax, that requires a flat learning cu
 
 ## Why fork & differences betwen taskbook and taskbook-ext
 
-I wanted a few features included that I wasn't sure fit into the style of the original project. Namely I wanted a system to add events to my calendar, and a way to sync my tasks across devices. I use taskbook extensively and to do some of these things the way I wanted I figured I might end up making drastic changes to the codebase, so I forked. I'd be more than happy to combine the codebases down the road if thats what the original author would want.
+I wanted a few features included that I wasn't sure fit into the style of the original project. Namely I wanted a system to add events to my calendar, and a way to sync my tasks across devices.  
 
-TODO:
-[x] Add fantastical 2 support
-[] Move away from current arg parsing system
-[] Implement multiple calendars support
-[] Sync tasks across devices
-~~[] Rewrite in rust to improve morality~~
+I use taskbook extensively and to do some of these things the way I wanted I figured I might end up making drastic changes to the codebase, so I forked. I'd be more than happy to combine the codebases down the road if thats what the original author would want.  
+
+TODO:  
+[x] Add fantastical 2 support  
+[] Move away from current arg parsing system  
+[] Implement multiple calendars support  
+[] Sync tasks across devices  
+~~[] Rewrite in rust to improve morality~~  
 
 ## Highlights
 
