@@ -1,5 +1,5 @@
 <h1 align="center">
-  Taskbook
+  Taskbook Extended
 </h1>
 
 <h4 align="center">
@@ -11,20 +11,18 @@
 </div>
 
 <p align="center">
-  <a href="https://travis-ci.com/klauscfhq/taskbook">
-    <img alt="Build Status" src="https://travis-ci.com/klauscfhq/taskbook.svg?branch=master">
-  </a>
+[![CircleCI](https://circleci.com/gh/johnstonjacob/taskbook-ext/tree/master.svg?style=svg)](https://circleci.com/gh/johnstonjacob/taskbook-ext/tree/master)
 </p>
 
 ## Description
 
-By utilizing a simple and minimal usage syntax, that requires a flat learning curve, taskbook enables you to effectively manage your tasks and notes across multiple boards from within your terminal. All data are written atomically to the storage in order to prevent corruptions, and are never shared with anyone or anything. Deleted items are automatically archived and can be inspected or restored at any moment.
+By utilizing a simple and minimal usage syntax, that requires a flat learning curve, taskbook-ext enables you to effectively manage your tasks and notes across multiple boards from within your terminal. All data are written atomically to the storage in order to prevent corruptions, and are never shared with anyone or anything. Deleted items are automatically archived and can be inspected or restored at any moment.
 
-Read this document in: [简体中文](https://github.com/klauscfhq/taskbook/blob/master/docs/readme.ZH.md), [Русский](https://github.com/klauscfhq/taskbook/blob/master/docs/readme.RU.md).
+## Why fork & differences betwen taskbook and taskbook-ext
 
-Visit the [contributing guidelines](https://github.com/klauscfhq/taskbook/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
+I wanted a few features included that I wasn't sure fit into the style of the original project. Namely I wanted a plugin system to easily be able to drop new commands in and out, a system to add events to my calendar, and a way to sync my tasks across devices. I use taskbook extensively and to do some of these things the way I wanted I figured I might end up making drastic changes to the codebase, so I forked. I'd be more than happy to combine the codebases down the road if thats what the original author would want.
 
-Come over to [Gitter](https://gitter.im/klauscfhq/taskbook) or [Twitter](https://twitter.com/klauscfhq) to share your thoughts on the project.
+Visit the [contributing guidelines](https://github.com/johnstonjacob/taskbook-ext/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
 
 ## Highlights
 
@@ -42,7 +40,7 @@ Come over to [Gitter](https://gitter.im/klauscfhq/taskbook) or [Twitter](https:/
 - Configurable through `~/.taskbook.json`
 - Data stored in JSON file at `~/.taskbook/storage`
 
-View highlights in a [taskbook board](https://raw.githubusercontent.com/klauscfhq/taskbook/master/media/highlights.png).
+View highlights in a [taskbook board](https://raw.githubusercontent.com/johnstonjacob/taskbook-ext/master/media/highlights.png).
 
 ## Contents
 
@@ -63,17 +61,8 @@ View highlights in a [taskbook board](https://raw.githubusercontent.com/klauscfh
 ### NPM
 
 ```bash
-npm install --global taskbook
+npm install --global taskbook-ext
 ```
-
-### Snapcraft
-
-```bash
-snap install taskbook
-snap alias taskbook tb # set alias
-```
-
-**Note:** Due to the snap's strictly confined nature, both the storage & configuration files will be saved under the [`$SNAP_USER_DATA`](https://docs.snapcraft.io/reference/env) environment variable instead of the generic `$HOME` one.
 
 ## Usage
 
@@ -102,6 +91,7 @@ $ tb --help
       --clear            Delete all checked items
       --help, -h         Display help message
       --version, -v      Display installed version
+      --calendar, -g     Add the provided task to your (fantastical 2) calendar with the specified time
 
     Examples
       $ tb
@@ -122,13 +112,14 @@ $ tb --help
       $ tb --archive
       $ tb --restore 4
       $ tb --clear
+      $ tb -g "Today at 5:00PM" -t Add things to my calendar
 ```
 
 ## Views
 
 ### Board View
 
-Invoking taskbook without any options will display all saved items grouped into their respective boards.
+Invoking taskbook-ext without any options will display all saved items grouped into their respective boards.
 
 <div align="center">
   <img alt="Boards" width="60%" src="media/header-boards.png"/>
@@ -144,7 +135,7 @@ In order to display all items in a timeline view, based on their creation date, 
 
 ## Configuration
 
-To configure taskbook navigate to the `~/.taskbook.json` file and modify any of the options to match your own preference. To reset back to the default values, simply delete the config file from your home directory.
+To configure taskbook-ext navigate to the `~/.taskbook.json` file and modify any of the options to match your own preference. To reset back to the default values, simply delete the config file from your home directory.
 
 The following illustrates all the available options with their respective default values.
 
@@ -165,7 +156,7 @@ The following illustrates all the available options with their respective defaul
 
 Filesystem path where the storage will be initialized, i.e: `/home/username/the-cloud` or `~/the-cloud`
 
-If left undefined the home directory `~` will be used and taskbook will be set-up under `~/.taskbook/`.
+If left undefined the home directory `~` will be used and taskbook-ext will be set-up under `~/.taskbook/`.
 
 ##### `displayCompleteTasks`
 
@@ -183,8 +174,8 @@ Display progress overview below the timeline and board views.
 
 ## Flight Manual
 
-The following is a minor walkthrough containing a set of examples on how to use taskbook.
-In case you spotted an error or think that an example is not to clear enough and should be further improved, please feel free to open an [issue](https://github.com/klauscfhq/taskbook/issues/new/choose) or [pull request](https://github.com/klauscfhq/taskbook/compare).
+The following is a minor walkthrough containing a set of examples on how to use taskbook-ext.
+In case you spotted an error or think that an example is not to clear enough and should be further improved, please feel free to open an [issue](https://github.com/johnstonjacob/taskbook-ext/issues/new/choose) or [pull request](https://github.com/johnstonjacob/taskbook-ext/compare).
 
 ### Create Task
 
@@ -236,7 +227,7 @@ $ tb -y 1 2 3
 
 ### Display Boards
 
-Invoking taskbook without any options will display all of saved items grouped into their respective boards.
+Invoking taskbook-ext without any options will display all of saved items grouped into their respective boards.
 
 ```
 $ tb
@@ -335,10 +326,10 @@ $ tb -f documentation
 
 ## Development
 
-For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klauscfhq/taskbook/blob/master/contributing.md).
+For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/johnstonjacob/taskbook-ext/blob/master/contributing.md).
 
 - Fork the repository and clone it to your machine
-- Navigate to your local fork: `cd taskbook`
+- Navigate to your local fork: `cd taskbook-ext`
 - Install the project dependencies: `npm install` or `yarn install`
 - Lint the code for errors: `npm test` or `yarn test`
 
@@ -349,8 +340,8 @@ For more info on how to contribute to the project, please read the [contributing
 
 ## Team
 
-- Klaus Sinani [(@klauscfhq)](https://github.com/klauscfhq)
+- Jacob Johnston [(@johnstonjacob)](https://github.com/johnstonjacob)
 
 ## License
-
-[MIT](https://github.com/klauscfhq/taskbook/blob/master/license.md)
+Credit to [The original taskbook](https://github.com/klauscfhq/taskbook)
+[MIT](https://github.com/johnstonjacob/taskbook-ext/blob/master/license.md)

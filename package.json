@@ -1,14 +1,14 @@
 {
-  "name": "taskbook",
-  "productName": "Taskbook",
-  "version": "0.2.0",
+  "name": "taskbook-ext",
+  "productName": "Taskbook Extended",
+  "version": "1.0.0",
   "description": "📓 Tasks, boards & notes for the command-line habitat",
-  "repository": "klauscfhq/taskbook",
+  "repository": "johnstonjacob/taskbook-ext",
   "license": "MIT",
   "author": {
-    "name": "Klaus Sinani",
-    "email": "klauscfhq@protonmail.com",
-    "url": "https://klauscfhq.github.io"
+    "name": "Jacob Johnston",
+    "email": "jacob@johnstonjacob.com",
+    "url": "http://johnstonjacob.com"
   },
   "bin": {
     "tb": "cli.js"
