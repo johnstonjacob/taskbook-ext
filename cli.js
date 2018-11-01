@@ -74,6 +74,10 @@ const cli = meow(help, {
     },
     clear: {
       type: 'boolean'
+    },
+    calendar: {
+      type: 'string',
+      alias: 'g'
     }
   }
 });
