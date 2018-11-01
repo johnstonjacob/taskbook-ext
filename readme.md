@@ -11,7 +11,7 @@
 </div>
 
 <p align="center">
-<img alt="CircleCI Status Check" https://circleci.com/gh/johnstonjacob/taskbook-ext.svg?style=shield />
+<img alt="CircleCI Status Check" src="https://circleci.com/gh/johnstonjacob/taskbook-ext.svg?style=shield" />
 </p>
 
 
