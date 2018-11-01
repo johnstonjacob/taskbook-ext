@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) Klaus Sinani <klauscfhq@protonmail.com> Mario Sinani <mariosinani@protonmail.ch>
+Copyright (c) for portions of project taskbook-extended are held by Klaus Sinani <klauscfhq@protonmail.com> and Mario Sinani <mariosinani@protonmail.ch> as part of project taskbook. All other copyright for project taskbook are held by Jacob Johnston <jacob@johnstonjacob.com>.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
