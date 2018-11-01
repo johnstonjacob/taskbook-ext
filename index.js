@@ -7,7 +7,15 @@ const taskbookCLI = (input, flags) => {
     return taskbook.displayArchive();
   }
 
-  if (flags.task) {
+  if (flags.calendar) {
+    if (!flags.task) {
+      return taskbook.calendarNoTask();
+    }
+    taskbook.createTask(input);
+    return taskbook.calendar(flags.calendar, input);
+  }
+
+  if (flags.task && !flags.calendar) {
     return taskbook.createTask(input);
   }
 
