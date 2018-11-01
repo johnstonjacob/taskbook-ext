@@ -48,7 +48,10 @@ workflows:
   version: 2
   test-deploy:
     jobs:
-      - test
+      - test:
+          branches:
+              ignore:
+                  - master
       - deploy:
           requires:
             - test
