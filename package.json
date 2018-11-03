@@ -1,7 +1,7 @@
 {
   "name": "taskbook-ext",
   "productName": "Taskbook Extended",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "📓 Tasks, boards & notes for the command-line habitat",
   "repository": "johnstonjacob/taskbook-ext",
   "license": "MIT",
